@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, TextInput, Button} from 'react-native';
+import {StyleSheet, Text, Alert, View, Image, TextInput, Button} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {NavigationContainer} from '@react-navigation/native';
@@ -23,7 +23,11 @@ const Index = () => {
         style={styles.text}
         inlineImageLeft="search_icon"
       />
-      <Button title="Login" style={styles.button} />
+      <Button
+        title="Login"
+        style={styles.button}
+        onPress={() => Alert.alert('Left button pressed')}
+      />
     </View>
   );
 };
@@ -51,13 +55,13 @@ export default Router;
 
 const styles = StyleSheet.create({
   text: {
-    borderWidth: 2,
+    borderWidth: 0,
     margin: 10,
-    borderRadius: 20,
+    borderRadius: 180,
     width: 300,
     textAlign: 'center',
-    backgroundColor: '#689cc5',
-    textDecorationColor: 'white',
+    backgroundColor: '#17a2b8',
+    textDecorationColor: '#17a2b8',
   },
   button: {
     justifyContent: 'space-between',
